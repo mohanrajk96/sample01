@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestAssuredBDD.Demo5_Validation_json">
+      <class name="RestAssuredBDD.Demo6_ValidationsXML">
         <methods>
           <include name="testmultiplecontent"/>
+          <include name="testsinglecontent"/>
         </methods>
-      </class> <!-- RestAssuredBDD.Demo5_Validation_json -->
+      </class> <!-- RestAssuredBDD.Demo6_ValidationsXML -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

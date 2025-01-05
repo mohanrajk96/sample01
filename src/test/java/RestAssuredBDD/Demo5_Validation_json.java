@@ -59,17 +59,29 @@ public class Demo5_Validation_json {
 	given()
 	
 	.when()   
-	     .get("https://demoqa.com/utilities/weather/city/salem")
+	     .get("https://jsonplaceholder.typicode.com/posts")
 	
 	.then()
 		.statusCode(200)
-		.body("x.City", hasItems("salem", "erode", "chennai"));
+		.body("id", hasItems(1, 3, 4));  // all this 3 items check there are not
+		
 	}
 	
-	/* @Test(priority=5)
+	@Test(priority=5)
 	 //5) Setting Parameters & Headers
 	public void settinfparameters() {
+		
+		given()
+			.param("Myname", "mohan")
+			.header("Myheader", "Salem")
+		
+		.when()   
+		     .get("https://demoqa.com/utilities/weather/city/salem")
+		
+		.then()
+			.statusCode(200)
+			.log().all();
 
 
-}  */
+	} 
 }
